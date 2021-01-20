@@ -135,9 +135,7 @@
           <!-- Description -->
           <div class="row mb-5">
             <div class="col-md-12">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia recusandae esse reiciendis officia omnis non rerum dicta
-              cupiditate nostrum molestias deserunt aut minus inventore animi atque, consequuntur ad fugit. Possimus culpa
-              blanditiis repellendus ipsa similique ullam, natus error dolor harum.
+              We make it easy to find your perfect fit with over a million available rentals.
             </div>
           </div>
         </div>
@@ -166,10 +164,12 @@
           </button>
         </div>
         <div class="modal-body">
-          <form>
+          <form action="{% url 'calc' %}" method="POST">
+            {% csrf_token %}
+
             <div class="form-group">
               <label for="property_name" class="col-form-label">Property:</label>
-              <input type="text" name="listing" class="form-control" value="45 Drivewood Cirlce" disabled>
+              <input type="text" name="listing" class="form-control" value="{{dests.title}}" >
             </div>
             <div class="form-group">
               <label for="name" class="col-form-label">Name:</label>

@@ -27,6 +27,7 @@ ALLOWED_HOSTS = [env('DJANGO_ALLOWED_HOSTS')]
 INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'listings.apps.ListingsConfig',
+    'calcs.apps.CalcsConfig',
     'realtors.apps.RealtorsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
