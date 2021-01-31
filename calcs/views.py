@@ -8,13 +8,13 @@ def calc(request):
 
     listing = request.POST['listing']
     name = request.POST['name']
-    email = request.POST['email']
+    Required = request.POST['Required']
     phone = request.POST['phone']
     message = request.POST['message']
 
 
 
-    calc = Calc(listing=listing,  name=name, email=email, phone=phone, message=message )
+    calc = Calc(listing=listing,  name=name, Required=Required, phone=phone, message=message )
 
     calc.save()
 
